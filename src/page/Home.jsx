@@ -1,6 +1,18 @@
 import React from 'react';
-import { Grid, AppBar, Toolbar, Button, Box, Typography, InputBase, Avatar } from '@material-ui/core';
-
+import {
+	Grid,
+	AppBar,
+	Toolbar,
+	Button,
+	Box,
+	Typography,
+	InputBase,
+	Avatar,
+	Accordion,
+	AccordionSummary,
+	AccordionDetails
+} from '@material-ui/core';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 const Home = () => {
 	return (
 		<Grid container>
@@ -316,7 +328,8 @@ const Home = () => {
 							flexDirection: 'column',
 							justifyContent: 'center',
 							alignItems: { md: 'flex-start', sm: 'center', xs: 'center' },
-							textAlign: 'center'
+							textAlign: 'center',
+							mt: { xs: '20px', sm: '0px', md: '0px' }
 						}}>
 						<Typography variant='h2' sx={{ color: '#f9f9f9', mb: '0.5rem' }}>
 							Download your shows to watch offline.
@@ -471,6 +484,195 @@ const Home = () => {
 							membership.
 						</Typography>
 					</Box>
+				</Grid>
+			</Grid>
+			<Grid
+				item
+				container
+				sx={{
+					minHeight: '100vh',
+					borderBottom: '8px solid #222',
+					bgcolor: '#000',
+					padding: { md: '70px 45px', sm: '70px 30px', xs: '70px 0px' },
+					alignContent: 'flex-start',
+					justifyContent: 'center'
+				}}>
+				<Grid item xs={12} sx={{ height: 'fit-content', mb: '20px' }}>
+					<Typography
+						variant='h2'
+						sx={{ color: '#f9f9f9', textAlign: 'center', fontSize: { xs: '1.6rem', sm: '2.5rem', md: '3rem' } }}>
+						Frequently Asked Questions
+					</Typography>
+				</Grid>
+				{/*Accordian group*/}
+				<Grid item md={6} xs={12} sx={{ mb: '20px' }}>
+					{/*what is netflix accordian */}
+					<Accordion
+						sx={{
+							bgcolor: '#222',
+							color: '#f9f9f9',
+							'& .MuiAccordionSummary-expandIconWrapper': { color: '#f9f9f9' }
+						}}>
+						<AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls='panel1a-content' id='panel1a-header'>
+							<Typography>What is Netflix?</Typography>
+						</AccordionSummary>
+						<AccordionDetails>
+							<Typography sx={{ mb: '20px' }}>
+								Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime,
+								documentaries, and more on thousands of internet-connected devices.
+							</Typography>
+							<Typography>
+								You can watch as much as you want, whenever you want without a single commercial – all for one low
+								monthly price. There's always something new to discover and new TV shows and movies are added every
+								week!
+							</Typography>
+						</AccordionDetails>
+					</Accordion>
+					{/*how much does netflix cost  */}
+					<Accordion
+						sx={{
+							bgcolor: '#222',
+							color: '#f9f9f9',
+							'& .MuiAccordionSummary-expandIconWrapper': { color: '#f9f9f9' }
+						}}>
+						<AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls='panel1a-content' id='panel1a-header'>
+							<Typography>how much does netflix cost ?</Typography>
+						</AccordionSummary>
+						<AccordionDetails>
+							<Typography>
+								Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed
+								monthly fee. Plans range from $8.99 to $17.99 a month. No extra costs, no contracts.
+							</Typography>
+						</AccordionDetails>
+					</Accordion>
+					{/*where can I watch */}
+					<Accordion
+						sx={{
+							bgcolor: '#222',
+							color: '#f9f9f9',
+							'& .MuiAccordionSummary-expandIconWrapper': { color: '#f9f9f9' }
+						}}>
+						<AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls='panel1a-content' id='panel1a-header'>
+							<Typography>where can I watch ?</Typography>
+						</AccordionSummary>
+						<AccordionDetails>
+							<Typography sx={{ mb: '20px' }}>
+								Watch anywhere, anytime, on an unlimited number of devices. Sign in with your Netflix account to watch
+								instantly on the web at netflix.com from your personal computer or on any internet-connected device that
+								offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game
+								consoles.
+							</Typography>
+							<Typography>
+								You can also download your favorite shows with the iOS, Android, or Windows 10 app. Use downloads to
+								watch while you're on the go and without an internet connection. Take Netflix with you anywhere.
+							</Typography>
+						</AccordionDetails>
+					</Accordion>
+					{/*how do I cancel */}
+					<Accordion
+						sx={{
+							bgcolor: '#222',
+							color: '#f9f9f9',
+							'& .MuiAccordionSummary-expandIconWrapper': { color: '#f9f9f9' }
+						}}>
+						<AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls='panel1a-content' id='panel1a-header'>
+							<Typography>how do I cancel ?</Typography>
+						</AccordionSummary>
+						<AccordionDetails>
+							<Typography>
+								Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account
+								online in two clicks. There are no cancellation fees – start or stop your account anytime.
+							</Typography>
+						</AccordionDetails>
+					</Accordion>
+					{/*what can I watch on Netflix */}
+					<Accordion
+						sx={{
+							bgcolor: '#222',
+							color: '#f9f9f9',
+							'& .MuiAccordionSummary-expandIconWrapper': { color: '#f9f9f9' }
+						}}>
+						<AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls='panel1a-content' id='panel1a-header'>
+							<Typography>what can I watch on Netflix ?</Typography>
+						</AccordionSummary>
+						<AccordionDetails>
+							<Typography>
+								Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix
+								originals, and more. Watch as much as you want, anytime you want.
+							</Typography>
+						</AccordionDetails>
+					</Accordion>
+					{/*Is Netflix good for kids */}
+					<Accordion
+						sx={{
+							bgcolor: '#222',
+							color: '#f9f9f9',
+							'& .MuiAccordionSummary-expandIconWrapper': { color: '#f9f9f9' }
+						}}>
+						<AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls='panel1a-content' id='panel1a-header'>
+							<Typography>Is Netflix good for kids ?</Typography>
+						</AccordionSummary>
+						<AccordionDetails>
+							<Typography sx={{ mb: '20px' }}>
+								The Netflix Kids experience is included in your membership to give parents control while kids enjoy
+								family-friendly TV shows and movies in their own space.
+							</Typography>
+							<Typography>
+								Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of
+								content kids can watch and block specific titles you don’t want kids to see.
+							</Typography>
+						</AccordionDetails>
+					</Accordion>
+				</Grid>
+				{/*type email to action  */}
+				<Grid
+					item
+					md={8}
+					xs={12}
+					sx={{
+						minHeight: '30vh',
+						px: { xs: '1.5rem', sm: '2.5rem', md: '4rem' },
+						display: 'flex',
+						flexDirection: 'column',
+						alignItems: 'center'
+					}}>
+					<Typography
+						variant='h2'
+						sx={{
+							color: '#f9f9f9',
+							textAlign: 'center',
+							fontSize: { xs: '1rem', sm: '1rem', md: '1rem' },
+							mb: '0.8rem'
+						}}>
+						Ready to watch? Enter your email to create or restart your membership.
+					</Typography>
+					<InputBase
+						multiline
+						maxRows={2}
+						placeholder='email address'
+						variant='outlined'
+						sx={{
+							width: '100%',
+							maxWidth: '700px',
+							height: '3.5rem',
+							bgcolor: '#f9f9f9',
+							mb: '0.8rem'
+						}}
+					/>
+					<Button
+						sx={{
+							inHeight: '40px',
+							width: '10rem',
+							bgcolor: '#e50914',
+							color: '#f9f9f9',
+							fontSize: { md: '1rem', xs: '1rem' },
+							py: { md: '7px', sm: '7px', xs: '7px' },
+							px: { md: '17px', sm: '17px', xs: '17px' },
+							borderRadius: '4px',
+							'&:hover,&:active': { bgcolor: '#c70610' }
+						}}>
+						Get Started
+					</Button>
 				</Grid>
 			</Grid>
 		</Grid>
