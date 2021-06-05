@@ -100,7 +100,17 @@ const Login = () => {
 							type='password'
 							sx={{ width: '100%', bgcolor: '#f3f3f3', height: '50px', mb: '16px' }}
 						/>
-						<Button sx={{ width: '100%', color: '#f9f9f9', bgcolor: '#e50914', p: '16px', my: '24px' }}>Sign in</Button>
+						<Button
+							sx={{
+								width: '100%',
+								color: '#f9f9f9',
+								bgcolor: '#e50914',
+								p: '16px',
+								my: '24px',
+								'&:hover,&:active': { bgcolor: '#c70610' }
+							}}>
+							Sign in
+						</Button>
 						{/*help and remember me */}
 						<Box
 							sx={{
